@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+:root {
+    --def-font-family: "Open Sans";
+}
+
+html, body {
+    margin: 0; padding: 0;
+    font-family: var(--def-font-family);
+    width: 100vw;
+    height: 100vh;
+}
+
+header {
+    display: grid;
+    height: max-content;
+}
+
+header > h1 {
+    text-align: center;
+    user-select: none;
+
+    font-family: var(--def-font-family);
+}
+header[aria-pressed="true"] > h1 {
+    animation-duration: 3s;
+    animation-name: cute-animation;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+
+main {
+    margin-top: 30px;
+}
+
+main > canvas {
+    display: block;
+    margin: 0 auto;
+
+    width: 70vw;
+    height: 70vh;
+
+    box-shadow: 0px 0px 20px black;
+}
+
+@keyframes cute-animation {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(0deg);
+    }
+    75% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+footer {
+    display: block;
+    margin: 0;
+    margin-top: 50px;
+
+    height: max-content;
+
+    user-select: none;
+}
+
+footer > cite > h6 {
+    text-align: right;
+    font-size: 14px;
+    font-weight: 550;
+
+    margin-right: 10px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #00ff73;
+}
+
+dialog:not([open]) {
+    background-color: red;
+}
+
+dialog[open] {
+    position: absolute;
+    display: inline-block;
+
+    left: 50px; top: 100px;
+    width: 300px; height: 200px;
+
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px black;
+
+    background-color: lightgray;
+
+    text-align: center;
+}
+
+button#restart-button {
+    display: inline-block;
+    margin: 0 auto;
+
+    margin-top: 20px;
+
+    font-family: var(--def-font-family);
+    font-size: 16px;
+
+    outline: none;
+    border: 1px solid black;
+    border-radius: 10px;
+
+    width: 120px; height: 50px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+    user-select: none;
+}
+button#restart-button:hover {
+    background-color: lightgray;
+}
+
+dialog > form > h2 {
+    user-select: none;
+}
+dialog > form > p > span {
+    font-weight: bolder;
+}
+
+main > h3#score-counter {
+    position: absolute;
+    display: block;
+
+    left: 48vw; top: 20vh;
+
+    user-select: none;
+}

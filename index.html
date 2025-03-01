@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header aria-pressed="false">
+        <h1> Flappy Bird </h1>
+    </header>
+
+    <main>
+        <canvas id="canvas"></canvas>
+        <h3 id="score-counter">Score: <span id="score">0</span></h3>
+    </main>
+
+    <dialog id="game-over-dialog" aria-modal="true">
+        <form method="dialog">
+            <h2> Game Over </h2>
+            <p> Your score is <span id="score">0</span> </p>
+            <button id="restart-button"> Restart </button>
+        </form>
+    </dialog>
+
+    <footer>
+        <cite> <h6> A <a href="https://en.wikipedia.org/wiki/Flappy_Birds">Flappy Bird</a> clone by Amrit Sanjeev <h6> </cite>
+    </footer>
+    
+    <script src="main.js"></script>
+</body>
+</html>
